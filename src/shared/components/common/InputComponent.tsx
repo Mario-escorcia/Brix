@@ -48,7 +48,7 @@ export const InputComponent = React.forwardRef<
       onChange?.(e);
     };
 
-    const mergedClassName = cn("h-full w-full relative", className);
+    const mergedClassName = cn("h-(--input-height) w-full relative", className);
 
     const labelFloating = isFocused || hasValue;
 
@@ -62,15 +62,15 @@ export const InputComponent = React.forwardRef<
           onFocus={handleFocus}
           onBlur={handleBlur}
           onChange={handleChange}
-          className={cn("", (props as any).className)}
+          className={cn("text-[.5rem] font-medium", (props as any).className)}
         />
 
         {label && (
           <label
             aria-hidden
             className={cn(
-              "absolute left-2 transition-all duration-150 pointer-events-none",
-              labelFloating ? "-top-[.45rem] left-3" : "top-2.5",
+              "absolute left-2 pointer-events-none",
+              labelFloating ? "-top-[.4rem] left-3" : "top-[.45rem]",
                
             )}
             style={{ fontSize: labelFloating ? 'var(--info-size)' : 'var(--p-size)' , backgroundColor: labelFloating ? labelBackground : 'transparent', padding: labelFloating ? '0 0.25rem' : '0' }}

@@ -1,5 +1,6 @@
 * {
   font-family: "Open Sans", sans-serif;
+  transition: all 0.2s ease;
 }
 
 :focus {
@@ -7,7 +8,7 @@
   border: none;
 }
 
-::selection{
+::selection {
   background: var(--primary-color);
   color: var(--white);
 }
@@ -24,6 +25,11 @@
   --gap: 0.5rem;
   --border-color: 1px solid #ccc;
   font-size: clamp(16px, calc(0.7vmin + 0.8vw), 28px);
+  --input-height: 1.9rem;
+  --button-radius: 0.3rem;
+  --button-padding: 0.5rem 1rem;
+  --button-height: 1.8rem;
+  --icon-size : .85rem;
 }
 
 h1 {
