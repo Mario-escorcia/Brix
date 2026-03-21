@@ -17,3 +17,11 @@ export type LoginStoreType = {
   validateUserLoginState: () => void;
   doLogin: (payload: LoginPayload) => void;
 };
+
+
+export type googleProfile ={
+  name : string;
+  email : string;
+  picture : string ;
+  sub : string; 
+}
